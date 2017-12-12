@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginViewController.h"
-#import "FLKAutolayout/FLKAutolayout.h"
+#import "LoginViewModel.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface LoginViewController () <UITextFieldDelegate>
-
+@property (strong, nonatomic) LoginViewModel *viewModel;
 @end
 
 @implementation LoginViewController
@@ -20,6 +21,8 @@
     [super viewDidLoad];
     [self setUpView];
     [self setupGestures];
+    [self setupViewModel];
+    [self setupBinding];
     // Do any additional setup after loading the view.
 }
 
@@ -105,11 +108,14 @@
                                         ofButton:self.loginButton];
     
     [self.loginButton addTarget:self
-                         action:@selector(tappedButtonLogin:)
-               forControlEvents:UIControlEventTouchUpInside];
+                          action:@selector(tappedButtonLogin:)
+                forControlEvents:UIControlEventTouchUpInside];
     self.usernameTextField.delegate = self;
     self.passwordTextField.delegate = self;
+    [self.loadingView setHidden: YES];
 }
+
+# pragma mark - Set up Gestures
 
 - (void)setupGestures {
     UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
@@ -118,10 +124,43 @@
     [self.view addGestureRecognizer:tapGesture];
 }
 
+#pragma mark - Set up view model
+
+- (void)setupViewModel {
+    self.viewModel = [[LoginViewModel alloc] init];
+}
+
+#pragma mark - Set up Binding
+
+- (void)setupBinding {
+    [[RACObserve(self.viewModel, isLoginning) skip:1] subscribeNext:^(id  _Nullable isLoginning) {
+        if ([isLoginning boolValue] == YES) {
+            [self showLoading];
+        } else {
+            [self hideLoading];
+        }
+    }];
+    
+    [[RACObserve(self.viewModel, isLoginSucessfully) skip:1] subscribeNext:^(id  _Nullable isLoginSucessfully) {
+        if ([isLoginSucessfully boolValue] == YES) {
+            [self redirectToHomeViewController];
+        }
+    }];
+
+    [[RACObserve(self.viewModel, messageError) skip:1] subscribeNext:^(id  _Nullable message) {
+        if (message != nil && ![message isEqualToString:@""])
+        {
+            [self alertMessage:message];
+        }
+    }];
+    
+}
+
 #pragma mark - Handle Events
 
 - (void)tappedButtonLogin:(UIButton *)button {
-    
+    [self.viewModel userTappedBtnLoginWithUserName:self.usernameTextField.text
+                                          password:self.passwordTextField.text];
 }
 
 - (void)tappedScreen:(UIGestureRecognizer *)gesture {
@@ -130,10 +169,34 @@
 
 #pragma mark - Textfield Delegate
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.view endEditing:YES];
     return YES;
+}
+     
+#pragma mark - Other methods
+- (void)showLoading {
+    [self.loadingView setHidden:NO];
+    [self.loadingView startAnimating];
+}
+
+- (void)hideLoading {
+    [self.loadingView setHidden:YES];
+    [self.loadingView stopAnimating];
+}
+
+- (void)redirectToHomeViewController {
+    [self performSegueWithIdentifier:@"LoginToHomeSegue" sender:nil];
+}
+
+- (void)alertMessage:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end
