@@ -52,7 +52,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rm-eB-5vg">
-                                <rect key="frame" x="114" y="556" width="147" height="40"/>
+                                <rect key="frame" x="114" y="440" width="147" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="hib-Mx-u1O"/>
                                     <constraint firstAttribute="width" constant="147" id="zJf-F0-Bch"/>
@@ -68,11 +68,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Pu-AI-dYp" secondAttribute="trailing" id="D5x-iD-J1W"/>
                             <constraint firstItem="5Pu-AI-dYp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IKE-fl-NBa"/>
                             <constraint firstItem="4Rm-eB-5vg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LFT-uu-p4G"/>
+                            <constraint firstItem="4Rm-eB-5vg" firstAttribute="top" secondItem="RPr-Xn-CxY" secondAttribute="bottom" constant="60" id="TpO-zb-8wV"/>
                             <constraint firstItem="RPr-Xn-CxY" firstAttribute="height" secondItem="hFi-lS-Btu" secondAttribute="height" id="VXy-bf-4CE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="5Pu-AI-dYp" secondAttribute="top" id="WaU-Sm-afH"/>
                             <constraint firstItem="hFi-lS-Btu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XCg-QH-uiN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Pu-AI-dYp" secondAttribute="bottom" id="dJa-Nz-KHB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Rm-eB-5vg" secondAttribute="bottom" constant="71" id="f3c-Fm-Eaj"/>
                             <constraint firstItem="dPO-cz-7ib" firstAttribute="firstBaseline" secondItem="hFi-lS-Btu" secondAttribute="baseline" constant="11" symbolType="layoutAnchor" id="lPg-V2-lqK"/>
                             <constraint firstItem="dPO-cz-7ib" firstAttribute="top" secondItem="hFi-lS-Btu" secondAttribute="bottom" constant="2" id="oSR-Xk-4Si"/>
                             <constraint firstItem="l71-NX-Ypf" firstAttribute="centerX" secondItem="dPO-cz-7ib" secondAttribute="centerX" id="r8n-8U-j04"/>
