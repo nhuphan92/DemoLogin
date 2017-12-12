@@ -59,6 +59,14 @@
                                 </constraints>
                                 <state key="normal" title="Login"/>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pe7-di-hWG">
+                                <rect key="frame" x="177" y="333" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="8Fm-uG-hI3"/>
+                                    <constraint firstAttribute="height" constant="20" id="rVJ-i4-gEr"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -70,6 +78,7 @@
                             <constraint firstItem="4Rm-eB-5vg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LFT-uu-p4G"/>
                             <constraint firstItem="4Rm-eB-5vg" firstAttribute="top" secondItem="RPr-Xn-CxY" secondAttribute="bottom" constant="60" id="TpO-zb-8wV"/>
                             <constraint firstItem="RPr-Xn-CxY" firstAttribute="height" secondItem="hFi-lS-Btu" secondAttribute="height" id="VXy-bf-4CE"/>
+                            <constraint firstItem="pe7-di-hWG" firstAttribute="top" secondItem="hFi-lS-Btu" secondAttribute="bottom" constant="30" id="W6e-Te-TdQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="5Pu-AI-dYp" secondAttribute="top" id="WaU-Sm-afH"/>
                             <constraint firstItem="hFi-lS-Btu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XCg-QH-uiN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Pu-AI-dYp" secondAttribute="bottom" id="dJa-Nz-KHB"/>
@@ -82,18 +91,36 @@
                             <constraint firstItem="dPO-cz-7ib" firstAttribute="centerX" secondItem="hFi-lS-Btu" secondAttribute="centerX" id="w3g-Ce-Ka6"/>
                             <constraint firstItem="dPO-cz-7ib" firstAttribute="width" secondItem="hFi-lS-Btu" secondAttribute="width" multiplier="1.06" id="w63-b7-8UN"/>
                             <constraint firstItem="RPr-Xn-CxY" firstAttribute="centerX" secondItem="hFi-lS-Btu" secondAttribute="centerX" id="wCs-Ie-KQo"/>
+                            <constraint firstItem="pe7-di-hWG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zBd-HT-z05"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="pe7-di-hWG" id="KOZ-Pk-MGd"/>
                         <outlet property="loginButton" destination="4Rm-eB-5vg" id="4Me-jf-xPX"/>
                         <outlet property="passwordTextField" destination="RPr-Xn-CxY" id="XQh-sR-6dg"/>
                         <outlet property="usernameTextField" destination="hFi-lS-Btu" id="Fr7-fB-XuR"/>
+                        <segue destination="BOu-v4-Ps0" kind="show" identifier="LoginToHomeSegue" id="c2K-0v-rRu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qh6-pQ-J6J">
+            <objects>
+                <viewController id="BOu-v4-Ps0" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d4p-0T-b1o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aie-km-quo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUc-oS-JzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="125"/>
         </scene>
     </scenes>
     <resources>

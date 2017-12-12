@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12165A4C1DB19C2C57F9EA87 /* libPods-DemoLoginTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA6CC2366A301D712AFECED /* libPods-DemoLoginTests.a */; };
-		3216927D7B123ACC5C970D5D /* libPods-DemoLoginUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDF2FBDEA32118142F91812 /* libPods-DemoLoginUITests.a */; };
+		84CAFC4DC800F2E11D7DE97C /* Pods_DemoLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2E37660972BE29DA6927F3 /* Pods_DemoLogin.framework */; };
+		9313E43733365FC2A17040D8 /* Pods_DemoLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620BD37AACE1B5E0A1F42BAB /* Pods_DemoLoginTests.framework */; };
 		97A284871FDF6722009E3DF5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284861FDF6722009E3DF5 /* LoginViewController.m */; };
+		97A2848E1FDF8D94009E3DF5 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A2848D1FDF8D94009E3DF5 /* LoginViewModel.m */; };
+		97A284921FDF97A6009E3DF5 /* ValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284911FDF97A6009E3DF5 /* ValidationResult.m */; };
+		97A284941FDFC107009E3DF5 /* LoginViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284931FDFC107009E3DF5 /* LoginViewModelTest.m */; };
 		97F2372E1FDF660700135799 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F2372D1FDF660700135799 /* AppDelegate.m */; };
 		97F237311FDF660700135799 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237301FDF660700135799 /* ViewController.m */; };
 		97F237341FDF660700135799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97F237321FDF660700135799 /* Main.storyboard */; };
@@ -18,7 +21,7 @@
 		97F2373C1FDF660700135799 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F2373B1FDF660700135799 /* main.m */; };
 		97F237461FDF660700135799 /* DemoLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237451FDF660700135799 /* DemoLoginTests.m */; };
 		97F237511FDF660700135799 /* DemoLoginUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237501FDF660700135799 /* DemoLoginUITests.m */; };
-		DB7936C24849AB13D178C81B /* libPods-DemoLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B78785D31F5647B4C43A2540 /* libPods-DemoLogin.a */; };
+		FEAA2777D7E9A4DEB85C041E /* Pods_DemoLoginUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F23B07EE53D48436ECA2F0 /* Pods_DemoLoginUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +43,17 @@
 
 /* Begin PBXFileReference section */
 		0CE495528F4CA00E9A220CD2 /* Pods-DemoLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLogin/Pods-DemoLogin.release.xcconfig"; sourceTree = "<group>"; };
-		3CDF2FBDEA32118142F91812 /* libPods-DemoLoginUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoLoginUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4315103C66D408B19B41CEC1 /* Pods-DemoLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLoginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLoginTests/Pods-DemoLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5AF8C3F489D5F59278F797AE /* Pods-DemoLoginUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLoginUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLoginUITests/Pods-DemoLoginUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5B2E37660972BE29DA6927F3 /* Pods_DemoLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		620BD37AACE1B5E0A1F42BAB /* Pods_DemoLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoLoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A284851FDF6722009E3DF5 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		97A284861FDF6722009E3DF5 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		97A2848C1FDF8D94009E3DF5 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		97A2848D1FDF8D94009E3DF5 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		97A284901FDF97A6009E3DF5 /* ValidationResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValidationResult.h; sourceTree = "<group>"; };
+		97A284911FDF97A6009E3DF5 /* ValidationResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValidationResult.m; sourceTree = "<group>"; };
+		97A284931FDFC107009E3DF5 /* LoginViewModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModelTest.m; sourceTree = "<group>"; };
 		97F237291FDF660700135799 /* DemoLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F2372C1FDF660700135799 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		97F2372D1FDF660700135799 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,9 +70,8 @@
 		97F2374C1FDF660700135799 /* DemoLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F237501FDF660700135799 /* DemoLoginUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoLoginUITests.m; sourceTree = "<group>"; };
 		97F237521FDF660700135799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BA6CC2366A301D712AFECED /* libPods-DemoLoginTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoLoginTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A261339CC68A88FCE553A165 /* Pods-DemoLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLogin/Pods-DemoLogin.debug.xcconfig"; sourceTree = "<group>"; };
-		B78785D31F5647B4C43A2540 /* libPods-DemoLogin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoLogin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3F23B07EE53D48436ECA2F0 /* Pods_DemoLoginUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoLoginUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E1E33BF9A5A716AE27D080 /* Pods-DemoLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLoginTests/Pods-DemoLoginTests.release.xcconfig"; sourceTree = "<group>"; };
 		F7263080CC45A1897C58DDDC /* Pods-DemoLoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLoginUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLoginUITests/Pods-DemoLoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB7936C24849AB13D178C81B /* libPods-DemoLogin.a in Frameworks */,
+				84CAFC4DC800F2E11D7DE97C /* Pods_DemoLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12165A4C1DB19C2C57F9EA87 /* libPods-DemoLoginTests.a in Frameworks */,
+				9313E43733365FC2A17040D8 /* Pods_DemoLoginTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3216927D7B123ACC5C970D5D /* libPods-DemoLoginUITests.a in Frameworks */,
+				FEAA2777D7E9A4DEB85C041E /* Pods_DemoLoginUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,9 +120,9 @@
 		756B9E0E304DB96D34DB147F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B78785D31F5647B4C43A2540 /* libPods-DemoLogin.a */,
-				9BA6CC2366A301D712AFECED /* libPods-DemoLoginTests.a */,
-				3CDF2FBDEA32118142F91812 /* libPods-DemoLoginUITests.a */,
+				5B2E37660972BE29DA6927F3 /* Pods_DemoLogin.framework */,
+				620BD37AACE1B5E0A1F42BAB /* Pods_DemoLoginTests.framework */,
+				E3F23B07EE53D48436ECA2F0 /* Pods_DemoLoginUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,10 +147,29 @@
 		97A284841FDF66F9009E3DF5 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
+				97A2848B1FDF8D65009E3DF5 /* ViewModel */,
 				97A284851FDF6722009E3DF5 /* LoginViewController.h */,
 				97A284861FDF6722009E3DF5 /* LoginViewController.m */,
 			);
 			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		97A2848B1FDF8D65009E3DF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				97A2848C1FDF8D94009E3DF5 /* LoginViewModel.h */,
+				97A2848D1FDF8D94009E3DF5 /* LoginViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		97A2848F1FDF9779009E3DF5 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				97A284901FDF97A6009E3DF5 /* ValidationResult.h */,
+				97A284911FDF97A6009E3DF5 /* ValidationResult.m */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		97F237201FDF660700135799 = {
@@ -170,6 +197,7 @@
 		97F2372B1FDF660700135799 /* DemoLogin */ = {
 			isa = PBXGroup;
 			children = (
+				97A2848F1FDF9779009E3DF5 /* Validator */,
 				97A284831FDF66E7009E3DF5 /* ViewControllers */,
 				97A284821FDF66C8009E3DF5 /* AppDelegate */,
 				97F2372F1FDF660700135799 /* ViewController.h */,
@@ -186,6 +214,7 @@
 		97F237441FDF660700135799 /* DemoLoginTests */ = {
 			isa = PBXGroup;
 			children = (
+				97A284931FDFC107009E3DF5 /* LoginViewModelTest.m */,
 				97F237451FDF660700135799 /* DemoLoginTests.m */,
 				97F237471FDF660700135799 /* Info.plist */,
 			);
@@ -345,9 +374,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoLogin/Pods-DemoLogin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -493,7 +527,9 @@
 				97A284871FDF6722009E3DF5 /* LoginViewController.m in Sources */,
 				97F237311FDF660700135799 /* ViewController.m in Sources */,
 				97F2373C1FDF660700135799 /* main.m in Sources */,
+				97A2848E1FDF8D94009E3DF5 /* LoginViewModel.m in Sources */,
 				97F2372E1FDF660700135799 /* AppDelegate.m in Sources */,
+				97A284921FDF97A6009E3DF5 /* ValidationResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A284941FDFC107009E3DF5 /* LoginViewModelTest.m in Sources */,
 				97F237461FDF660700135799 /* DemoLoginTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
