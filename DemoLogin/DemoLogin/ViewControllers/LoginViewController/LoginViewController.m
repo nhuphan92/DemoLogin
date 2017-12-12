@@ -10,7 +10,7 @@
 #import "LoginViewController.h"
 #import "FLKAutolayout/FLKAutolayout.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UITextFieldDelegate>
 
 @end
 
@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpView];
+    [self setupGestures];
     // Do any additional setup after loading the view.
 }
 
@@ -103,10 +104,36 @@
                                        textColor:[UIColor whiteColor]
                                         ofButton:self.loginButton];
     
+    [self.loginButton addTarget:self
+                         action:@selector(tappedButtonLogin:)
+               forControlEvents:UIControlEventTouchUpInside];
+    self.usernameTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+}
+
+- (void)setupGestures {
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                               action:@selector(tappedScreen:)];
     
+    [self.view addGestureRecognizer:tapGesture];
 }
 
 #pragma mark - Handle Events
 
+- (void)tappedButtonLogin:(UIButton *)button {
+    
+}
+
+- (void)tappedScreen:(UIGestureRecognizer *)gesture {
+    [self.view endEditing:true];
+}
+
+#pragma mark - Textfield Delegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.view endEditing:YES];
+    return YES;
+}
 
 @end
