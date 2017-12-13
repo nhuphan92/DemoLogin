@@ -84,7 +84,7 @@ NSString * kMessageEmpty = @"Field is empty.";
     if (self.isAbleToLogin) {
         self.isLoginning = YES;
         
-        [[AgileAPIClient shareInstance] loginWithUsername:username
+        [[AgileAPIClient sharedInstance] loginWithUsername:username
                                                  password:password
                                         successCompletion:^(UserModel *user) {
                                             self.isLoginning = NO;

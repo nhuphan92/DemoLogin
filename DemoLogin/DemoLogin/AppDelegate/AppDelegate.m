@@ -7,10 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "LoginViewController.h"
-#import <OHHTTPStubs/OHHTTPStubs.h>
-#import "OHHTTPStubsResponse+JSON.h"
-
+#import "StubHTTPsRequestHelper.h"
 @interface AppDelegate ()
 
 @end
@@ -20,7 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self stubHTTPSRequest];
+    
+    [[StubHTTPsRequestHelper sharedInstance] stubLoginHTTPSRequestWithSuccessResult];
+    
     return YES;
 }
 
@@ -49,20 +48,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (void)stubHTTPSRequest {
-    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-        return [request.URL.host isEqualToString:@"eastagile.com"];
-    } withStubResponse:^OHHTTPStubsResponse*(NSURLRequest *request) {
-        NSDictionary* obj = @{ @"data": @{@"username": @"Nhu Phan",
-                                          @"password": @"123456",
-                                          @"user_id": @(1),
-                                          @"token": @"kasdfhsjfdhahffbfiuaahbsfuiwwbaifbfwiwbvaibibuwfeskjbfsjfksjdfsakhfasjfhwhbfwuifkjbvsdj"
-                                          }
-                               };
-        return [OHHTTPStubsResponse responseWithJSONObject:obj statusCode:200 headers:nil];
-    }];
 }
 
 @end

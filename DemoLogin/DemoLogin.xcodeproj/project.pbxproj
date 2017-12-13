@@ -16,6 +16,7 @@
 		97A284991FE0D785009E3DF5 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284981FE0D785009E3DF5 /* APIClient.m */; };
 		97A2849D1FE0D9BA009E3DF5 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A2849C1FE0D9BA009E3DF5 /* UserModel.m */; };
 		97A284A41FE10054009E3DF5 /* AgileAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284A31FE10054009E3DF5 /* AgileAPIClient.m */; };
+		97A284A81FE1181C009E3DF5 /* StubHTTPsRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284A71FE1181C009E3DF5 /* StubHTTPsRequestHelper.m */; };
 		97F2372E1FDF660700135799 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F2372D1FDF660700135799 /* AppDelegate.m */; };
 		97F237311FDF660700135799 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237301FDF660700135799 /* ViewController.m */; };
 		97F237341FDF660700135799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97F237321FDF660700135799 /* Main.storyboard */; };
@@ -63,6 +64,8 @@
 		97A2849C1FE0D9BA009E3DF5 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		97A284A21FE10054009E3DF5 /* AgileAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgileAPIClient.h; sourceTree = "<group>"; };
 		97A284A31FE10054009E3DF5 /* AgileAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgileAPIClient.m; sourceTree = "<group>"; };
+		97A284A61FE1181C009E3DF5 /* StubHTTPsRequestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StubHTTPsRequestHelper.h; sourceTree = "<group>"; };
+		97A284A71FE1181C009E3DF5 /* StubHTTPsRequestHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StubHTTPsRequestHelper.m; sourceTree = "<group>"; };
 		97F237291FDF660700135799 /* DemoLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F2372C1FDF660700135799 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		97F2372D1FDF660700135799 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 		97A284951FE0D711009E3DF5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				97A284A51FE117AB009E3DF5 /* StubHTTPSRequestHelper */,
 				97A284961FE0D72C009E3DF5 /* WebService */,
 			);
 			path = Service;
@@ -215,6 +219,15 @@
 				97A284A31FE10054009E3DF5 /* AgileAPIClient.m */,
 			);
 			path = AgileAPIClient;
+			sourceTree = "<group>";
+		};
+		97A284A51FE117AB009E3DF5 /* StubHTTPSRequestHelper */ = {
+			isa = PBXGroup;
+			children = (
+				97A284A61FE1181C009E3DF5 /* StubHTTPsRequestHelper.h */,
+				97A284A71FE1181C009E3DF5 /* StubHTTPsRequestHelper.m */,
+			);
+			path = StubHTTPSRequestHelper;
 			sourceTree = "<group>";
 		};
 		97F237201FDF660700135799 = {
@@ -582,6 +595,7 @@
 				97A284991FE0D785009E3DF5 /* APIClient.m in Sources */,
 				97F2373C1FDF660700135799 /* main.m in Sources */,
 				97A2848E1FDF8D94009E3DF5 /* LoginViewModel.m in Sources */,
+				97A284A81FE1181C009E3DF5 /* StubHTTPsRequestHelper.m in Sources */,
 				97A284A41FE10054009E3DF5 /* AgileAPIClient.m in Sources */,
 				97F2372E1FDF660700135799 /* AppDelegate.m in Sources */,
 				97A2849D1FE0D9BA009E3DF5 /* UserModel.m in Sources */,

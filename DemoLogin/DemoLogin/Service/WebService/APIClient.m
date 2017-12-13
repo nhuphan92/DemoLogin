@@ -24,7 +24,7 @@
     return [super init];
 }
 
-+ (instancetype)shareInstance {
++ (instancetype)sharedInstance {
     static APIClient *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

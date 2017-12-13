@@ -27,7 +27,7 @@ static NSString * kFailRequestSendingMessage = @"Unexpected Error!";
 
 @interface APIClient : NSObject
 - (instancetype)initWithBaseUrlString:(NSString *)url;
-+ (instancetype)shareInstance;
++ (instancetype)sharedInstance;
 - (void)executeRequestWithMethod:(HTTPSMethodType)method
                             link:(NSString *)link
                            prams:(NSDictionary *)params
