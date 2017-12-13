@@ -12,8 +12,10 @@
 NSString * kMessageEmpty = @"Field is empty.";
 
 @interface LoginViewModel()
+
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *password;
+
 @end
 
 @implementation LoginViewModel

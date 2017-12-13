@@ -14,4 +14,5 @@
     self.errorMessage = message;
     self.result = validationResultType;
 }
+
 @end

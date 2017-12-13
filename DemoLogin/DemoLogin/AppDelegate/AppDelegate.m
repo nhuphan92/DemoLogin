@@ -48,18 +48,4 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark - Methods
-
-- (void)setupWindows {
-    UIWindow * window = [[UIWindow alloc] init];
-    window.frame = [[UIScreen mainScreen] bounds];
-    
-    LoginViewController * loginViewController = [[LoginViewController alloc] init];
-    UINavigationController * nv = [[UINavigationController alloc] initWithRootViewController: loginViewController];
-    window.rootViewController = nv;
-    
-    self.window = window;
-    [self.window makeKeyAndVisible];
- }
-
 @end

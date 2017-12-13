@@ -14,8 +14,10 @@ typedef enum ValidationResultType: NSUInteger {
 } ValidationResultType;
 
 @interface ValidationResult: NSObject
+
 @property (strong, nonatomic) NSString * errorMessage;
 @property (assign, nonatomic) ValidationResultType result;
 
 -(void)setValues:(NSString *)message validationResultType:(ValidationResultType)validationResultType;
+
 @end
