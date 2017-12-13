@@ -18,7 +18,7 @@
 @end
 
 @interface TextValidationRuleMaximum: NSObject <TextValidationRuleType>
--(instancetype)initWithMessage:(NSString *)message minimumSize:(NSInteger)maximumSize;
+-(instancetype)initWithMessage:(NSString *)message maximumSize:(NSInteger)maximumSize;
 @end
 
 @interface TextValidationRuleMinimum: NSObject <TextValidationRuleType>

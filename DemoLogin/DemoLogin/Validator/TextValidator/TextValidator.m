@@ -13,6 +13,7 @@
 
 - (ValidationResult *)isValidWithText:(NSString *)text andRules:(NSArray *)rules {
     NSMutableArray * failResults = [[NSMutableArray alloc] init];
+    
     for(int i = 0; i < rules.count; i++) {
         NSObject<TextValidationRuleType> * item = (NSObject<TextValidationRuleType>*)rules[i];
         if (item != nil) {

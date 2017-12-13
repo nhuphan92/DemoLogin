@@ -74,7 +74,7 @@
 
 @implementation TextValidationRuleMaximum
 
--(instancetype)initWithMessage:(NSString *)message minimumSize:(NSInteger)maximumSize {
+-(instancetype)initWithMessage:(NSString *)message maximumSize:(NSInteger)maximumSize {
     self = [super init];
     if (self) {
         self.message = message;

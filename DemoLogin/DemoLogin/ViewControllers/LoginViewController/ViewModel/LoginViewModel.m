@@ -10,6 +10,8 @@
 #import "ValidationResult.h"
 #import "AgileAPIClient.h"
 #import "APIClient.h"
+#import "TextValidator.h"
+#import "TextValidationRule.h"
 
 NSString * kMessageEmpty = @"Field is empty.";
 
@@ -17,38 +19,45 @@ NSString * kMessageEmpty = @"Field is empty.";
 
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *password;
-
+@property (strong, nonatomic) TextValidator * textValidator;
+@property (strong, nonatomic) NSMutableArray *usernameRules;
+@property (strong, nonatomic) NSMutableArray *passwordRules;
 @end
 
 @implementation LoginViewModel
 
 - (instancetype)init {
-    self.isLoginning = NO;
-    self.isAbleToLogin = NO;
-    self.isLoginSucessfully = NO;
-    self.validatedUsernameResult = [[ValidationResult alloc] init];
-    self.validatedPasswordResult = [[ValidationResult alloc] init];
-    [self.validatedUsernameResult setValues:@"" validationResultType:ValidationResultTypeFail];
-    [self.validatedPasswordResult setValues:@"" validationResultType:ValidationResultTypeFail];
-    return [super init];
+    self = [super init];
+    if (self) {
+        self.isLoginning = NO;
+        self.isAbleToLogin = NO;
+        self.isLoginSucessfully = NO;
+        self.validatedUsernameResult = [[ValidationResult alloc] init];
+        self.validatedPasswordResult = [[ValidationResult alloc] init];
+        [self.validatedUsernameResult setValues:@"" validationResultType:ValidationResultTypeFail];
+        [self.validatedPasswordResult setValues:@"" validationResultType:ValidationResultTypeFail];
+        self.textValidator = [[TextValidator alloc] init];
+//        self.usernameRules = @[Text];
+    }
+    return self;
+}
+
+- (void)setupRules {
+//    self.usernameRules = [[NSMutableArray alloc] init];
+//    TextValidationRuleRequired *requiredRule = [[TextValidationRuleRequired alloc] initWithMessage:@"Username is required"];
+//    TextValidationRuleMinimum *minumumRule = [[TextValidationRuleMinimum alloc] initWithMessage:@"Username must be longer than 6" minimumSize:6];
+//    TextValidationRuleMaximum *maximumRule = [[[TextValidationRuleMaximum alloc] initWithMessage:@"Username longest is 20 characters" maximumSize:20];
+//                                              self.usernameRules addObjectsFromArray:@[requiredRule, minumumRule, maximumRule]]
 }
 
 - (void)validatePassword:(NSString *)password {
-    if (password == nil || [password isEqualToString:@""]) {
-        [self.validatedPasswordResult setValues:kMessageEmpty validationResultType:ValidationResultTypeFail];
-        return;
-    }
-    
-    [self.validatedPasswordResult setValues:@"" validationResultType:ValidationResultTypeOk];
+    self.validatedUsernameResult = [self.textValidator isValidWithText:password
+                                                              andRules:self.passwordRules];
 }
 
 - (void)validateUsername:(NSString *)username {
-    if (username == nil || [username isEqualToString:@""]) {
-        [self.validatedUsernameResult setValues:kMessageEmpty validationResultType:ValidationResultTypeFail];
-        return;
-    }
-    
-    [self.validatedUsernameResult setValues:@"" validationResultType:ValidationResultTypeOk];
+    self.validatedUsernameResult = [self.textValidator isValidWithText:username
+                                                              andRules:self.usernameRules];
 }
 
 - (void)userInputTexts:(NSString *)username pasword:(NSString *)password {
