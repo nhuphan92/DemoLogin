@@ -10,6 +10,17 @@
 
 @implementation ValidationResult
 
+- (instancetype)initWithMessage:(NSString *)message
+           validationResultType:(ValidationResultType)validationResultType
+{
+    self = [super init];
+    if (self) {
+        self.errorMessage = message;
+        self.result = validationResultType;
+    }
+    return self;
+}
+
 -(void)setValues:(NSString *)message validationResultType:(ValidationResultType)validationResultType {
     self.errorMessage = message;
     self.result = validationResultType;

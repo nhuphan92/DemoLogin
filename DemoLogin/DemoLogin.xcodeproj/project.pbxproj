@@ -19,6 +19,8 @@
 		97A284A81FE1181C009E3DF5 /* StubHTTPsRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284A71FE1181C009E3DF5 /* StubHTTPsRequestHelper.m */; };
 		97A284AF1FE1218D009E3DF5 /* TextValidatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284AE1FE1218D009E3DF5 /* TextValidatorTest.m */; };
 		97A284B21FE123DB009E3DF5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284B01FE123DB009E3DF5 /* BaseViewController.m */; };
+		97A284B61FE12655009E3DF5 /* TextValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284B51FE12655009E3DF5 /* TextValidator.m */; };
+		97A284BA1FE126D9009E3DF5 /* TextValidationRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284B91FE126D9009E3DF5 /* TextValidationRule.m */; };
 		97F2372E1FDF660700135799 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F2372D1FDF660700135799 /* AppDelegate.m */; };
 		97F237311FDF660700135799 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237301FDF660700135799 /* ViewController.m */; };
 		97F237341FDF660700135799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97F237321FDF660700135799 /* Main.storyboard */; };
@@ -71,6 +73,10 @@
 		97A284AE1FE1218D009E3DF5 /* TextValidatorTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextValidatorTest.m; sourceTree = "<group>"; };
 		97A284B01FE123DB009E3DF5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		97A284B11FE123DB009E3DF5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		97A284B41FE12655009E3DF5 /* TextValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextValidator.h; sourceTree = "<group>"; };
+		97A284B51FE12655009E3DF5 /* TextValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextValidator.m; sourceTree = "<group>"; };
+		97A284B81FE126D9009E3DF5 /* TextValidationRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextValidationRule.h; sourceTree = "<group>"; };
+		97A284B91FE126D9009E3DF5 /* TextValidationRule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextValidationRule.m; sourceTree = "<group>"; };
 		97F237291FDF660700135799 /* DemoLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F2372C1FDF660700135799 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		97F2372D1FDF660700135799 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -185,6 +191,8 @@
 		97A2848F1FDF9779009E3DF5 /* Validator */ = {
 			isa = PBXGroup;
 			children = (
+				97A284B71FE126AC009E3DF5 /* TextValidationRule */,
+				97A284B31FE125E1009E3DF5 /* TextValidator */,
 				97A284901FDF97A6009E3DF5 /* ValidationResult.h */,
 				97A284911FDF97A6009E3DF5 /* ValidationResult.m */,
 			);
@@ -253,6 +261,24 @@
 				97A284B01FE123DB009E3DF5 /* BaseViewController.m */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		97A284B31FE125E1009E3DF5 /* TextValidator */ = {
+			isa = PBXGroup;
+			children = (
+				97A284B41FE12655009E3DF5 /* TextValidator.h */,
+				97A284B51FE12655009E3DF5 /* TextValidator.m */,
+			);
+			path = TextValidator;
+			sourceTree = "<group>";
+		};
+		97A284B71FE126AC009E3DF5 /* TextValidationRule */ = {
+			isa = PBXGroup;
+			children = (
+				97A284B81FE126D9009E3DF5 /* TextValidationRule.h */,
+				97A284B91FE126D9009E3DF5 /* TextValidationRule.m */,
+			);
+			path = TextValidationRule;
 			sourceTree = "<group>";
 		};
 		97F237201FDF660700135799 = {
@@ -615,7 +641,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97A284871FDF6722009E3DF5 /* LoginViewController.m in Sources */,
+				97A284B61FE12655009E3DF5 /* TextValidator.m in Sources */,
 				97F237311FDF660700135799 /* ViewController.m in Sources */,
+				97A284BA1FE126D9009E3DF5 /* TextValidationRule.m in Sources */,
 				97A284B21FE123DB009E3DF5 /* BaseViewController.m in Sources */,
 				97A284991FE0D785009E3DF5 /* APIClient.m in Sources */,
 				97F2373C1FDF660700135799 /* main.m in Sources */,
