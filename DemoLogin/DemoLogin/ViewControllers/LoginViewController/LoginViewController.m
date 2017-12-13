@@ -170,11 +170,14 @@
 - (void)showLoading {
     [self.loadingView setHidden:NO];
     [self.loadingView startAnimating];
+    [self.view endEditing:YES];
+    [self.view setUserInteractionEnabled:NO];
 }
 
 - (void)hideLoading {
     [self.loadingView setHidden:YES];
     [self.loadingView stopAnimating];
+    [self.view setUserInteractionEnabled:YES];
 }
 
 - (void)redirectToHomeViewController {

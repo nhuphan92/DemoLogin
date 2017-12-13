@@ -8,6 +8,8 @@
 
 #import "LoginViewModel.h"
 #import "ValidationResult.h"
+#import "AgileAPIClient.h"
+#import "APIClient.h"
 
 NSString * kMessageEmpty = @"Field is empty.";
 
@@ -81,10 +83,17 @@ NSString * kMessageEmpty = @"Field is empty.";
     
     if (self.isAbleToLogin) {
         self.isLoginning = YES;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self.isLoginning = NO;
-            self.isLoginSucessfully = YES;
-        });
+        
+        [[AgileAPIClient shareInstance] loginWithUsername:username
+                                                 password:password
+                                        successCompletion:^(UserModel *user) {
+                                            self.isLoginning = NO;
+                                            self.isLoginSucessfully = YES;
+                                        } failureCompletion:^(NSString *message, NSNumber *code) {
+                                            self.isLoginning = NO;
+                                            self.isLoginSucessfully = NO;
+                                            self.messageError = message;
+                                        }];
     } else {
         self.messageError = [self currentMessageError];
         self.isLoginSucessfully = NO;

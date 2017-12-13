@@ -13,6 +13,9 @@
 		97A2848E1FDF8D94009E3DF5 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A2848D1FDF8D94009E3DF5 /* LoginViewModel.m */; };
 		97A284921FDF97A6009E3DF5 /* ValidationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284911FDF97A6009E3DF5 /* ValidationResult.m */; };
 		97A284941FDFC107009E3DF5 /* LoginViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284931FDFC107009E3DF5 /* LoginViewModelTest.m */; };
+		97A284991FE0D785009E3DF5 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284981FE0D785009E3DF5 /* APIClient.m */; };
+		97A2849D1FE0D9BA009E3DF5 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A2849C1FE0D9BA009E3DF5 /* UserModel.m */; };
+		97A284A41FE10054009E3DF5 /* AgileAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284A31FE10054009E3DF5 /* AgileAPIClient.m */; };
 		97F2372E1FDF660700135799 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F2372D1FDF660700135799 /* AppDelegate.m */; };
 		97F237311FDF660700135799 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237301FDF660700135799 /* ViewController.m */; };
 		97F237341FDF660700135799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97F237321FDF660700135799 /* Main.storyboard */; };
@@ -54,6 +57,12 @@
 		97A284901FDF97A6009E3DF5 /* ValidationResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValidationResult.h; sourceTree = "<group>"; };
 		97A284911FDF97A6009E3DF5 /* ValidationResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValidationResult.m; sourceTree = "<group>"; };
 		97A284931FDFC107009E3DF5 /* LoginViewModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModelTest.m; sourceTree = "<group>"; };
+		97A284971FE0D785009E3DF5 /* APIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		97A284981FE0D785009E3DF5 /* APIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		97A2849B1FE0D9BA009E3DF5 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		97A2849C1FE0D9BA009E3DF5 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		97A284A21FE10054009E3DF5 /* AgileAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgileAPIClient.h; sourceTree = "<group>"; };
+		97A284A31FE10054009E3DF5 /* AgileAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgileAPIClient.m; sourceTree = "<group>"; };
 		97F237291FDF660700135799 /* DemoLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F2372C1FDF660700135799 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		97F2372D1FDF660700135799 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -172,6 +181,42 @@
 			path = Validator;
 			sourceTree = "<group>";
 		};
+		97A284951FE0D711009E3DF5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				97A284961FE0D72C009E3DF5 /* WebService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		97A284961FE0D72C009E3DF5 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				97A284A11FE10018009E3DF5 /* AgileAPIClient */,
+				97A284971FE0D785009E3DF5 /* APIClient.h */,
+				97A284981FE0D785009E3DF5 /* APIClient.m */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		97A2849A1FE0D999009E3DF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97A2849B1FE0D9BA009E3DF5 /* UserModel.h */,
+				97A2849C1FE0D9BA009E3DF5 /* UserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97A284A11FE10018009E3DF5 /* AgileAPIClient */ = {
+			isa = PBXGroup;
+			children = (
+				97A284A21FE10054009E3DF5 /* AgileAPIClient.h */,
+				97A284A31FE10054009E3DF5 /* AgileAPIClient.m */,
+			);
+			path = AgileAPIClient;
+			sourceTree = "<group>";
+		};
 		97F237201FDF660700135799 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +242,8 @@
 		97F2372B1FDF660700135799 /* DemoLogin */ = {
 			isa = PBXGroup;
 			children = (
+				97A2849A1FE0D999009E3DF5 /* Model */,
+				97A284951FE0D711009E3DF5 /* Service */,
 				97A2848F1FDF9779009E3DF5 /* Validator */,
 				97A284831FDF66E7009E3DF5 /* ViewControllers */,
 				97A284821FDF66C8009E3DF5 /* AppDelegate */,
@@ -375,12 +422,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DemoLogin/Pods-DemoLogin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
 				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,9 +579,12 @@
 			files = (
 				97A284871FDF6722009E3DF5 /* LoginViewController.m in Sources */,
 				97F237311FDF660700135799 /* ViewController.m in Sources */,
+				97A284991FE0D785009E3DF5 /* APIClient.m in Sources */,
 				97F2373C1FDF660700135799 /* main.m in Sources */,
 				97A2848E1FDF8D94009E3DF5 /* LoginViewModel.m in Sources */,
+				97A284A41FE10054009E3DF5 /* AgileAPIClient.m in Sources */,
 				97F2372E1FDF660700135799 /* AppDelegate.m in Sources */,
+				97A2849D1FE0D9BA009E3DF5 /* UserModel.m in Sources */,
 				97A284921FDF97A6009E3DF5 /* ValidationResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

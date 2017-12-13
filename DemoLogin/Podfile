@@ -9,6 +9,9 @@ target 'DemoLogin' do
   
   pod 'ReactiveObjC'
   pod 'OCMock'
+  pod 'AFNetworking'
+  pod 'JSONModel'
+  pod 'OHHTTPStubs'
 
   target 'DemoLoginTests' do
     inherit! :search_paths
