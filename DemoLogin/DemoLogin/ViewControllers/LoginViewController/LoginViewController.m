@@ -31,15 +31,130 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Set up View
+- (void)setUpView {
+    [self setTextFieldPropertiesWithBackgroundColor:[UIColor clearColor]
+                                       cornerRadius:0
+                                        borderWidth:0
+                                      textAlignment:NSTextAlignmentLeft
+                                          textColor:[UIColor whiteColor]
+                                  isSecureTextEntry:NO
+                                    placeholderText:@"username"
+                               placeholderTextColor:[UIColor grayColor]
+                                        ofTextField:self.usernameTextField];
+    
+    [self setTextFieldPropertiesWithBackgroundColor:[UIColor clearColor]
+                                       cornerRadius:0
+                                        borderWidth:0
+                                      textAlignment:NSTextAlignmentLeft
+                                          textColor:[UIColor whiteColor]
+                                  isSecureTextEntry:YES
+                                    placeholderText:@"password"
+                               placeholderTextColor:[UIColor grayColor]
+                                        ofTextField:self.passwordTextField];
+    
+    [self setButtonPropertiesWithBackgroundColor:[UIColor clearColor]
+                                    cornerRadius:20
+                                     borderWidth:1
+                                     borderColor:[UIColor whiteColor]
+                                       textColor:[UIColor whiteColor]
+                                        ofButton:self.loginButton];
+    
+    [self.loginButton addTarget:self
+                          action:@selector(tappedButtonLogin:)
+                forControlEvents:UIControlEventTouchUpInside];
+    self.usernameTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+    [self.loadingView setHidden: YES];
 }
-*/
+
+# pragma mark - Set up Gestures
+
+- (void)setupGestures {
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                               action:@selector(tappedScreen:)];
+    
+    [self.view addGestureRecognizer:tapGesture];
+}
+
+#pragma mark - Set up view model
+
+- (void)setupViewModel {
+    self.viewModel = [[LoginViewModel alloc] init];
+}
+
+#pragma mark - Set up Binding
+
+- (void)setupBinding {
+    [[RACObserve(self.viewModel, isLoginning) skip:1] subscribeNext:^(id  _Nullable isLoginning) {
+        if ([isLoginning boolValue] == YES) {
+            [self showLoading];
+        } else {
+            [self hideLoading];
+        }
+    }];
+    
+    [[RACObserve(self.viewModel, isLoginSucessfully) skip:1] subscribeNext:^(id  _Nullable isLoginSucessfully) {
+        if ([isLoginSucessfully boolValue] == YES) {
+            [self redirectToHomeViewController];
+        }
+    }];
+
+    [[RACObserve(self.viewModel, messageError) skip:1] subscribeNext:^(id  _Nullable message) {
+        if (message != nil && ![message isEqualToString:@""])
+        {
+            [self alertMessage:message];
+        }
+    }];
+    
+}
+
+#pragma mark - Handle Events
+
+- (void)tappedButtonLogin:(UIButton *)button {
+    [self.viewModel userTappedBtnLoginWithUserName:self.usernameTextField.text
+                                          password:self.passwordTextField.text];
+}
+
+- (void)tappedScreen:(UIGestureRecognizer *)gesture {
+    [self.view endEditing:true];
+}
+
+#pragma mark - Textfield Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.view endEditing:YES];
+    return YES;
+}
+     
+#pragma mark - Other methods
+
+- (void)showLoading {
+    [self.loadingView setHidden:NO];
+    [self.loadingView startAnimating];
+    [self.view endEditing:YES];
+    [self.view setUserInteractionEnabled:NO];
+}
+
+- (void)hideLoading {
+    [self.loadingView setHidden:YES];
+    [self.loadingView stopAnimating];
+    [self.view setUserInteractionEnabled:YES];
+}
+
+- (void)redirectToHomeViewController {
+    [self performSegueWithIdentifier:@"LoginToHomeSegue" sender:nil];
+}
+
+- (void)alertMessage:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 #pragma mark - Set up View
 
