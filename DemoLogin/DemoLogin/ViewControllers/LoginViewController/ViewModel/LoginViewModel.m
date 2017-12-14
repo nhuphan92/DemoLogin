@@ -47,20 +47,23 @@ NSString * kMessageEmpty = @"Field is empty.";
     TextValidationRuleMinimum *minumumRule = [[TextValidationRuleMinimum alloc] initWithMessage:@"Username must be longer than 6" minimumSize:6];
     TextValidationRuleMaximum *maximumRule = [[TextValidationRuleMaximum alloc] initWithMessage:@"Username longest is 20 characters" maximumSize:20];
     
+    TextValidationRuleRequired *requiredRulePassword = [[TextValidationRuleRequired alloc] initWithMessage:@"Password is required"];
+    TextValidationRuleMaximum *maximumRulePassword = [[TextValidationRuleMaximum alloc] initWithMessage:@"Password longest is 10 characters" maximumSize:10];
+    
     self.usernameRules = [[NSMutableArray alloc] init];
     self.passwordRules = [[NSMutableArray alloc] init];
     [self.usernameRules addObjectsFromArray:@[requiredRule, minumumRule, maximumRule]];
-    [self.passwordRules addObjectsFromArray:@[requiredRule, maximumRule]];
+    [self.passwordRules addObjectsFromArray:@[requiredRulePassword, maximumRulePassword]];
     
 }
 
 - (void)validatePassword:(NSString *)password {
-    self.validatedUsernameResult = [self.textValidator isValidWithText:password
+    self.validatedPasswordResult = [self.textValidator isValidWithText:password
                                                               andRules:self.passwordRules];
 }
 
 - (void)validateUsername:(NSString *)username {
-    self.validatedPasswordResult = [self.textValidator isValidWithText:username
+    self.validatedUsernameResult = [self.textValidator isValidWithText:username
                                                               andRules:self.usernameRules];
 }
 
