@@ -17,6 +17,7 @@
                                 isSecureTextEntry:(BOOL)isSecureTextEntry
                                   placeholderText:(NSString *)placeholderText
                              placeholderTextColor:(UIColor *)placeholderTextColor
+                               autocorrectionType:(UITextAutocorrectionType)autocorrectionType
                                       ofTextField:(UITextField *)textField;
 
 - (void)setButtonPropertiesWithBackgroundColor:(UIColor *)backgroundColor

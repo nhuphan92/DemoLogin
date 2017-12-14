@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViews];
+    [self setAccessibilities];
 }
 
 
@@ -38,6 +39,10 @@
                           action:@selector(tappedBtnLogout)
                 forControlEvents:UIControlEventTouchUpInside];
     
+}
+
+- (void)setAccessibilities {
+    [self.logoutButton setAccessibilityLabel:@"logout"];
 }
 
 #pragma mark - Handle Event

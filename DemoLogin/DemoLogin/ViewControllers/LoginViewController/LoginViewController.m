@@ -23,6 +23,7 @@
     [self setupGestures];
     [self setupViewModel];
     [self setupBinding];
+    [self setAccessibilities];
     // Do any additional setup after loading the view.
 }
 
@@ -41,6 +42,7 @@
                                   isSecureTextEntry:NO
                                     placeholderText:@"username"
                                placeholderTextColor:[UIColor grayColor]
+                                 autocorrectionType:UITextAutocorrectionTypeNo
                                         ofTextField:self.usernameTextField];
     
     [self setTextFieldPropertiesWithBackgroundColor:[UIColor clearColor]
@@ -51,6 +53,7 @@
                                   isSecureTextEntry:YES
                                     placeholderText:@"password"
                                placeholderTextColor:[UIColor grayColor]
+                                 autocorrectionType:UITextAutocorrectionTypeNo
                                         ofTextField:self.passwordTextField];
     
     [self setButtonPropertiesWithBackgroundColor:[UIColor clearColor]
@@ -66,6 +69,12 @@
     self.usernameTextField.delegate = self;
     self.passwordTextField.delegate = self;
     [self.loadingView setHidden: YES];
+}
+
+- (void)setAccessibilities {
+    [self.usernameTextField setAccessibilityLabel:@"username"];
+    [self.passwordTextField setAccessibilityLabel:@"password"];
+    [self.loginButton setAccessibilityLabel:@"login"];
 }
 
 # pragma mark - Set up Gestures
@@ -153,6 +162,7 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     [alert addAction:okAction];
+    [alert setAccessibilityLabel:@"Oops"];
     [self presentViewController:alert animated:YES completion:nil];
 }
 

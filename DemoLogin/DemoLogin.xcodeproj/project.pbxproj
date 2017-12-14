@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16922731EBD2C018020339C7 /* Pods_DemoLogin_DemoLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A20F4BAEA6A3B6CA345CC8 /* Pods_DemoLogin_DemoLoginTests.framework */; };
 		84CAFC4DC800F2E11D7DE97C /* Pods_DemoLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2E37660972BE29DA6927F3 /* Pods_DemoLogin.framework */; };
 		9313E43733365FC2A17040D8 /* Pods_DemoLoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620BD37AACE1B5E0A1F42BAB /* Pods_DemoLoginTests.framework */; };
 		97A284871FDF6722009E3DF5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284861FDF6722009E3DF5 /* LoginViewController.m */; };
@@ -22,6 +23,7 @@
 		97A284B61FE12655009E3DF5 /* TextValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284B51FE12655009E3DF5 /* TextValidator.m */; };
 		97A284BA1FE126D9009E3DF5 /* TextValidationRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284B91FE126D9009E3DF5 /* TextValidationRule.m */; };
 		97A284BC1FE217EF009E3DF5 /* TextRulesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284BB1FE217EF009E3DF5 /* TextRulesTest.m */; };
+		97A284C01FE2370C009E3DF5 /* UILoginTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284BF1FE2370C009E3DF5 /* UILoginTest.m */; };
 		97F2372E1FDF660700135799 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F2372D1FDF660700135799 /* AppDelegate.m */; };
 		97F237311FDF660700135799 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237301FDF660700135799 /* ViewController.m */; };
 		97F237341FDF660700135799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97F237321FDF660700135799 /* Main.storyboard */; };
@@ -30,6 +32,7 @@
 		97F2373C1FDF660700135799 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F2373B1FDF660700135799 /* main.m */; };
 		97F237461FDF660700135799 /* DemoLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237451FDF660700135799 /* DemoLoginTests.m */; };
 		97F237511FDF660700135799 /* DemoLoginUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237501FDF660700135799 /* DemoLoginUITests.m */; };
+		B1262CECC0CF303176C5FD1F /* Pods_DemoLogin_DemoLoginUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E35D36BF61CC5DF95B36D0 /* Pods_DemoLogin_DemoLoginUITests.framework */; };
 		FEAA2777D7E9A4DEB85C041E /* Pods_DemoLoginUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F23B07EE53D48436ECA2F0 /* Pods_DemoLoginUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +55,15 @@
 
 /* Begin PBXFileReference section */
 		0CE495528F4CA00E9A220CD2 /* Pods-DemoLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLogin/Pods-DemoLogin.release.xcconfig"; sourceTree = "<group>"; };
+		1CB135FE25D1EEAC36E87F5F /* Pods-DemoLogin-DemoLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLogin-DemoLoginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLogin-DemoLoginTests/Pods-DemoLogin-DemoLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
+		291D938A4566A5D48A609E14 /* Pods-DemoLogin-DemoLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLogin-DemoLoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLogin-DemoLoginTests/Pods-DemoLogin-DemoLoginTests.release.xcconfig"; sourceTree = "<group>"; };
+		40E35D36BF61CC5DF95B36D0 /* Pods_DemoLogin_DemoLoginUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoLogin_DemoLoginUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4315103C66D408B19B41CEC1 /* Pods-DemoLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLoginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLoginTests/Pods-DemoLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
+		56A20F4BAEA6A3B6CA345CC8 /* Pods_DemoLogin_DemoLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoLogin_DemoLoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF8C3F489D5F59278F797AE /* Pods-DemoLoginUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLoginUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLoginUITests/Pods-DemoLoginUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5B2E37660972BE29DA6927F3 /* Pods_DemoLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		620BD37AACE1B5E0A1F42BAB /* Pods_DemoLoginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoLoginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D574F08A1341A9848349AD8 /* Pods-DemoLogin-DemoLoginUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLogin-DemoLoginUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLogin-DemoLoginUITests/Pods-DemoLogin-DemoLoginUITests.release.xcconfig"; sourceTree = "<group>"; };
 		97A284851FDF6722009E3DF5 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		97A284861FDF6722009E3DF5 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		97A2848C1FDF8D94009E3DF5 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
@@ -79,6 +87,7 @@
 		97A284B81FE126D9009E3DF5 /* TextValidationRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextValidationRule.h; sourceTree = "<group>"; };
 		97A284B91FE126D9009E3DF5 /* TextValidationRule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextValidationRule.m; sourceTree = "<group>"; };
 		97A284BB1FE217EF009E3DF5 /* TextRulesTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextRulesTest.m; sourceTree = "<group>"; };
+		97A284BF1FE2370C009E3DF5 /* UILoginTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILoginTest.m; sourceTree = "<group>"; };
 		97F237291FDF660700135799 /* DemoLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F2372C1FDF660700135799 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		97F2372D1FDF660700135799 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +105,7 @@
 		97F237501FDF660700135799 /* DemoLoginUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoLoginUITests.m; sourceTree = "<group>"; };
 		97F237521FDF660700135799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A261339CC68A88FCE553A165 /* Pods-DemoLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLogin/Pods-DemoLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		B427E172406941E041E5BE2F /* Pods-DemoLogin-DemoLoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLogin-DemoLoginUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLogin-DemoLoginUITests/Pods-DemoLogin-DemoLoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3F23B07EE53D48436ECA2F0 /* Pods_DemoLoginUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoLoginUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E1E33BF9A5A716AE27D080 /* Pods-DemoLoginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLoginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLoginTests/Pods-DemoLoginTests.release.xcconfig"; sourceTree = "<group>"; };
 		F7263080CC45A1897C58DDDC /* Pods-DemoLoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoLoginUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoLoginUITests/Pods-DemoLoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9313E43733365FC2A17040D8 /* Pods_DemoLoginTests.framework in Frameworks */,
+				16922731EBD2C018020339C7 /* Pods_DemoLogin_DemoLoginTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAA2777D7E9A4DEB85C041E /* Pods_DemoLoginUITests.framework in Frameworks */,
+				B1262CECC0CF303176C5FD1F /* Pods_DemoLogin_DemoLoginUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +150,10 @@
 				E9E1E33BF9A5A716AE27D080 /* Pods-DemoLoginTests.release.xcconfig */,
 				F7263080CC45A1897C58DDDC /* Pods-DemoLoginUITests.debug.xcconfig */,
 				5AF8C3F489D5F59278F797AE /* Pods-DemoLoginUITests.release.xcconfig */,
+				1CB135FE25D1EEAC36E87F5F /* Pods-DemoLogin-DemoLoginTests.debug.xcconfig */,
+				291D938A4566A5D48A609E14 /* Pods-DemoLogin-DemoLoginTests.release.xcconfig */,
+				B427E172406941E041E5BE2F /* Pods-DemoLogin-DemoLoginUITests.debug.xcconfig */,
+				8D574F08A1341A9848349AD8 /* Pods-DemoLogin-DemoLoginUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -148,6 +164,8 @@
 				5B2E37660972BE29DA6927F3 /* Pods_DemoLogin.framework */,
 				620BD37AACE1B5E0A1F42BAB /* Pods_DemoLoginTests.framework */,
 				E3F23B07EE53D48436ECA2F0 /* Pods_DemoLoginUITests.framework */,
+				56A20F4BAEA6A3B6CA345CC8 /* Pods_DemoLogin_DemoLoginTests.framework */,
+				40E35D36BF61CC5DF95B36D0 /* Pods_DemoLogin_DemoLoginUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -328,6 +346,7 @@
 				97A284AE1FE1218D009E3DF5 /* TextValidatorTest.m */,
 				97A284931FDFC107009E3DF5 /* LoginViewModelTest.m */,
 				97A284BB1FE217EF009E3DF5 /* TextRulesTest.m */,
+				97A284BF1FE2370C009E3DF5 /* UILoginTest.m */,
 				97F237451FDF660700135799 /* DemoLoginTests.m */,
 				97F237471FDF660700135799 /* Info.plist */,
 			);
@@ -531,13 +550,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoLogin-DemoLoginUITests/Pods-DemoLogin-DemoLoginUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoLoginUITests/Pods-DemoLoginUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoLogin-DemoLoginUITests/Pods-DemoLogin-DemoLoginUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B3F554D7DD982D0DF0A32B28 /* [CP] Copy Pods Resources */ = {
@@ -552,7 +582,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoLoginUITests/Pods-DemoLoginUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoLogin-DemoLoginUITests/Pods-DemoLogin-DemoLoginUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C7126FA79849DA81B78518FD /* [CP] Copy Pods Resources */ = {
@@ -567,7 +597,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoLoginTests/Pods-DemoLoginTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoLogin-DemoLoginTests/Pods-DemoLogin-DemoLoginTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D2B4DC530772254291D4DDCF /* [CP] Check Pods Manifest.lock */ = {
@@ -581,7 +611,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DemoLoginTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DemoLogin-DemoLoginTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -599,7 +629,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DemoLoginUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DemoLogin-DemoLoginUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -627,13 +657,26 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoLogin-DemoLoginTests/Pods-DemoLogin-DemoLoginTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoLoginTests/Pods-DemoLoginTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoLogin-DemoLoginTests/Pods-DemoLogin-DemoLoginTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -663,6 +706,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A284C01FE2370C009E3DF5 /* UILoginTest.m in Sources */,
 				97A284941FDFC107009E3DF5 /* LoginViewModelTest.m in Sources */,
 				97F237461FDF660700135799 /* DemoLoginTests.m in Sources */,
 				97A284BC1FE217EF009E3DF5 /* TextRulesTest.m in Sources */,
@@ -847,7 +891,7 @@
 		};
 		97F237591FDF660700135799 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4315103C66D408B19B41CEC1 /* Pods-DemoLoginTests.debug.xcconfig */;
+			baseConfigurationReference = 1CB135FE25D1EEAC36E87F5F /* Pods-DemoLogin-DemoLoginTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -862,7 +906,7 @@
 		};
 		97F2375A1FDF660700135799 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9E1E33BF9A5A716AE27D080 /* Pods-DemoLoginTests.release.xcconfig */;
+			baseConfigurationReference = 291D938A4566A5D48A609E14 /* Pods-DemoLogin-DemoLoginTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -877,7 +921,7 @@
 		};
 		97F2375C1FDF660700135799 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7263080CC45A1897C58DDDC /* Pods-DemoLoginUITests.debug.xcconfig */;
+			baseConfigurationReference = B427E172406941E041E5BE2F /* Pods-DemoLogin-DemoLoginUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoLoginUITests/Info.plist;
@@ -891,7 +935,7 @@
 		};
 		97F2375D1FDF660700135799 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AF8C3F489D5F59278F797AE /* Pods-DemoLoginUITests.release.xcconfig */;
+			baseConfigurationReference = 8D574F08A1341A9848349AD8 /* Pods-DemoLogin-DemoLoginUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoLoginUITests/Info.plist;

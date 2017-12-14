@@ -43,6 +43,7 @@
                                 isSecureTextEntry:(BOOL)isSecureTextEntry
                                   placeholderText:(NSString *)placeholderText
                              placeholderTextColor:(UIColor *)placeholderTextColor
+                               autocorrectionType:(UITextAutocorrectionType)autocorrectionType
                                       ofTextField:(UITextField *)textField {
     [textField setBackgroundColor:backgroundColor];
     [textField.layer setCornerRadius:cornerRadius];
@@ -51,6 +52,7 @@
     [textField setTextColor:textColor];
     [textField setSecureTextEntry:isSecureTextEntry];
     [textField setPlaceholder:placeholderText];
+    [textField setAutocorrectionType:autocorrectionType];
     if ([textField respondsToSelector:@selector(setAttributedPlaceholder:)]) {
         textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholderText attributes:@{NSForegroundColorAttributeName: placeholderTextColor}];
     } else {

@@ -6,20 +6,22 @@ target 'DemoLogin' do
   use_frameworks!
   # pod 'FLKAutoLayout'
   # Pods for DemoLogin
-  
+
   pod 'ReactiveObjC'
   pod 'OCMock'
   pod 'AFNetworking'
   pod 'JSONModel'
   pod 'OHHTTPStubs'
 
+
   target 'DemoLoginTests' do
-    inherit! :search_paths
+      # inherit! :search_paths
     # Pods for testing
+    pod 'KIF'
   end
 
   target 'DemoLoginUITests' do
-    inherit! :search_paths
+      #inherit! :search_paths
     # Pods for testing
   end
 
