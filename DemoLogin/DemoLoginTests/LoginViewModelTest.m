@@ -62,7 +62,7 @@ NSString * kEmptyText = @"";
     __block NSInteger tempValue = 0;
     [[RACObserve(self.viewModel, isLoginning) skip:1] subscribeNext:^(id  _Nullable result) {
         XCTAssertNotNil(result);
-        NSLog(@"                                       isLoginning %@", result);
+        NSLog(@"isLoginning %@", result);
         if (tempValue % 2 == 0) {
             XCTAssertEqual([((NSNumber *)result) boolValue], isLoginning);
         } else {

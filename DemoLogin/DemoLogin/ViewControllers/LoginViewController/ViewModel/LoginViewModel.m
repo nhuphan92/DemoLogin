@@ -37,17 +37,21 @@ NSString * kMessageEmpty = @"Field is empty.";
         [self.validatedUsernameResult setValues:@"" validationResultType:ValidationResultTypeFail];
         [self.validatedPasswordResult setValues:@"" validationResultType:ValidationResultTypeFail];
         self.textValidator = [[TextValidator alloc] init];
-//        self.usernameRules = @[Text];
+        [self setupRules];
     }
     return self;
 }
 
 - (void)setupRules {
-//    self.usernameRules = [[NSMutableArray alloc] init];
-//    TextValidationRuleRequired *requiredRule = [[TextValidationRuleRequired alloc] initWithMessage:@"Username is required"];
-//    TextValidationRuleMinimum *minumumRule = [[TextValidationRuleMinimum alloc] initWithMessage:@"Username must be longer than 6" minimumSize:6];
-//    TextValidationRuleMaximum *maximumRule = [[[TextValidationRuleMaximum alloc] initWithMessage:@"Username longest is 20 characters" maximumSize:20];
-//                                              self.usernameRules addObjectsFromArray:@[requiredRule, minumumRule, maximumRule]]
+    TextValidationRuleRequired *requiredRule = [[TextValidationRuleRequired alloc] initWithMessage:@"Username is required"];
+    TextValidationRuleMinimum *minumumRule = [[TextValidationRuleMinimum alloc] initWithMessage:@"Username must be longer than 6" minimumSize:6];
+    TextValidationRuleMaximum *maximumRule = [[TextValidationRuleMaximum alloc] initWithMessage:@"Username longest is 20 characters" maximumSize:20];
+    
+    self.usernameRules = [[NSMutableArray alloc] init];
+    self.passwordRules = [[NSMutableArray alloc] init];
+    [self.usernameRules addObjectsFromArray:@[requiredRule, minumumRule, maximumRule]];
+    [self.passwordRules addObjectsFromArray:@[requiredRule, maximumRule]];
+    
 }
 
 - (void)validatePassword:(NSString *)password {
@@ -56,7 +60,7 @@ NSString * kMessageEmpty = @"Field is empty.";
 }
 
 - (void)validateUsername:(NSString *)username {
-    self.validatedUsernameResult = [self.textValidator isValidWithText:username
+    self.validatedPasswordResult = [self.textValidator isValidWithText:username
                                                               andRules:self.usernameRules];
 }
 

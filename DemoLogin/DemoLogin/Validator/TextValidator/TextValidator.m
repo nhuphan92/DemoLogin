@@ -12,18 +12,9 @@
 @implementation TextValidator
 
 - (ValidationResult *)isValidWithText:(NSString *)text andRules:(NSArray *)rules {
-    NSMutableArray * failResults = [[NSMutableArray alloc] init];
     
-    for(int i = 0; i < rules.count; i++) {
-        NSObject<TextValidationRuleType> * item = (NSObject<TextValidationRuleType>*)rules[i];
-        if (item != nil) {
-            if ([item isValidWithText:text] == NO) {
-                ValidationResult * result = [[ValidationResult alloc] initWithMessage:[item messageError]
-                                                                 validationResultType:ValidationResultTypeFail];
-                [failResults addObject:result];
-            }
-        }
-    }
+    NSArray * failResults = [self findErrorWithText:text andRules:rules];
+
     if (failResults.count > 0) {
         return failResults[0];
     }
@@ -31,4 +22,20 @@
                                                        validationResultType:ValidationResultTypeOk];
     return okResult;
 }
+
+- (NSArray *)findErrorWithText:(NSString *)text andRules:(NSArray *)rules {
+    NSMutableArray *array = [NSMutableArray new];
+
+    for (NSObject<TextValidationRuleType> *item in rules) {
+        if (item != nil) {
+            if ([item isValidWithText:text] == NO) {
+                ValidationResult * result = [[ValidationResult alloc] initWithMessage:[item messageError]
+                                                                 validationResultType:ValidationResultTypeFail];
+                [array addObject:result];
+            }
+        }
+    }
+    return array;
+}
+
 @end
