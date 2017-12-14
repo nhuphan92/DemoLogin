@@ -21,6 +21,7 @@
 		97A284B21FE123DB009E3DF5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284B01FE123DB009E3DF5 /* BaseViewController.m */; };
 		97A284B61FE12655009E3DF5 /* TextValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284B51FE12655009E3DF5 /* TextValidator.m */; };
 		97A284BA1FE126D9009E3DF5 /* TextValidationRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284B91FE126D9009E3DF5 /* TextValidationRule.m */; };
+		97A284BC1FE217EF009E3DF5 /* TextRulesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A284BB1FE217EF009E3DF5 /* TextRulesTest.m */; };
 		97F2372E1FDF660700135799 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F2372D1FDF660700135799 /* AppDelegate.m */; };
 		97F237311FDF660700135799 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F237301FDF660700135799 /* ViewController.m */; };
 		97F237341FDF660700135799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97F237321FDF660700135799 /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		97A284B51FE12655009E3DF5 /* TextValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextValidator.m; sourceTree = "<group>"; };
 		97A284B81FE126D9009E3DF5 /* TextValidationRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextValidationRule.h; sourceTree = "<group>"; };
 		97A284B91FE126D9009E3DF5 /* TextValidationRule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextValidationRule.m; sourceTree = "<group>"; };
+		97A284BB1FE217EF009E3DF5 /* TextRulesTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextRulesTest.m; sourceTree = "<group>"; };
 		97F237291FDF660700135799 /* DemoLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F2372C1FDF660700135799 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		97F2372D1FDF660700135799 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			children = (
 				97A284AE1FE1218D009E3DF5 /* TextValidatorTest.m */,
 				97A284931FDFC107009E3DF5 /* LoginViewModelTest.m */,
+				97A284BB1FE217EF009E3DF5 /* TextRulesTest.m */,
 				97F237451FDF660700135799 /* DemoLoginTests.m */,
 				97F237471FDF660700135799 /* Info.plist */,
 			);
@@ -662,6 +665,7 @@
 			files = (
 				97A284941FDFC107009E3DF5 /* LoginViewModelTest.m in Sources */,
 				97F237461FDF660700135799 /* DemoLoginTests.m in Sources */,
+				97A284BC1FE217EF009E3DF5 /* TextRulesTest.m in Sources */,
 				97A284AF1FE1218D009E3DF5 /* TextValidatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
